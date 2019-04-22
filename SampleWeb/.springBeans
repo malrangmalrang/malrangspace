@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/egovframework/spring/context-common.xml</config>
 		<config>src/main/resources/egovframework/spring/context-datasource.xml</config>
+		<config>src/main/resources/egovframework/spring/context-aspect.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

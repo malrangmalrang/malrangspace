@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 import egovframework.sample.service.SampleDAO;
 import egovframework.sample.service.SampleService;
 import egovframework.sample.service.SampleVO;
+import egovframework.sample.service.common.SampleAdvice;
 
 @Service("sampleService")
 public class SampleServiceImpl implements SampleService {
 	@Resource(name="daoSpring")
 	private SampleDAO sampleDAO;
+	
 
 	public void insertSample(SampleVO vo) throws Exception {
 		sampleDAO.insertSample(vo);

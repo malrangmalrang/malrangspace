@@ -13,6 +13,7 @@ public class SampleServiceClient {
 		// 2. Spring 컨테이너로부터 SampleServiceImpl 객체를 Lookup한다.
 		SampleService sampleService = (SampleService)container.getBean("sampleService");
 		SampleVO vo = new SampleVO();
+		
 		vo.setTitle("임시 제목");
 		vo.setRegUser("테스터");
 		vo.setContent("임시 내용입니다....");
@@ -23,6 +24,10 @@ public class SampleServiceClient {
 		for(SampleVO sample : sampleList) {
 			System.out.println("---> " + sample.toString());
 		}
+		
+		vo.setId(4);
+		sampleService.deleteSample(vo);
+		
 		// 3. Spring 컨테이너를 종료한다.
 		container.close();
 	}
